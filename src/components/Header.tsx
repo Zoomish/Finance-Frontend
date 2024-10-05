@@ -9,14 +9,16 @@ const Header: FC = () => {
                 <FaBtc size={20} />
             </Link>
             {isAuth && (
-                <ul className="flex items-center">
-                    <li>
-                        <NavLink to={'/dashboard'}>Dashboard</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to={'/logout'}>Logout</NavLink>
-                    </li>
-                </ul>
+                <nav>
+                    <ul className="flex items-center">
+                        <li>
+                            <NavLink to={'/dashboard'}>Dashboard</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/logout'}>Logout</NavLink>
+                        </li>
+                    </ul>
+                </nav>
             )}
         </header>
     )
