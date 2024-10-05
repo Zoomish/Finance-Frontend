@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { FaBtc } from 'react-icons/fa'
+import { FaBtc, FaSignOutAlt } from 'react-icons/fa'
 const Header: FC = () => {
     const isAuth = true
     return (
@@ -51,7 +51,10 @@ const Header: FC = () => {
                 </nav>
             )}
             {isAuth ? (
-                <button className="text-white p-2">Logout</button>
+                <button className="btn btn-red">
+                    <span>Logout</span>
+                    <FaSignOutAlt />
+                </button>
             ) : (
                 <Link to={'/login'}>
                     <button className="text-white p-2">Login</button>
