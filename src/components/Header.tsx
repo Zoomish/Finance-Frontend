@@ -15,7 +15,7 @@ const Header: FC = () => {
                             <NavLink
                                 to={'/'}
                                 className={({ isActive }) =>
-                                    isActive ? 'text-white' : 'text-white/50'
+                                    isActive ? 'text-white p-2' : 'text-white/50 p-2'
                                 }
                             >
                                 Home
@@ -25,7 +25,7 @@ const Header: FC = () => {
                             <NavLink
                                 to={'/transactions'}
                                 className={({ isActive }) =>
-                                    isActive ? 'text-white' : 'text-white/50'
+                                    isActive ? 'text-white p-2' : 'text-white/50 p-2'
                                 }
                             >
                                 Transactions
@@ -35,7 +35,7 @@ const Header: FC = () => {
                             <NavLink
                                 to={'/categories'}
                                 className={({ isActive }) =>
-                                    isActive ? 'text-white' : 'text-white/50'
+                                    isActive ? 'text-white p-2' : 'text-white/50 p-2'
                                 }
                             >
                                 Categories
