@@ -1,24 +1,20 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
-      padding: '2rem',
+      padding: "2rem",
       center: true,
     },
     extend: {
       fontFamily: {
-        'roboto': ['Roboto', 'sans-serif'],
+        roboto: ["Roboto", "sans-serif"],
       },
       colors: {
-        'primary': '#3490dc',
-        'dark': '#212121',
+        primary: "#3490dc",
+        dark: "#212121",
       },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'), "prettier-plugin-tailwindcss"],
-}
+  plugins: [require("@tailwindcss/forms"), "prettier-plugin-tailwindcss"],
+};
