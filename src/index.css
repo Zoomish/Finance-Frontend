@@ -26,6 +26,10 @@
     @apply border border-slate-800 bg-slate-700 bg-transparent p-2 placeholder:text-white rounded-md outline-none focus:border-slate-300;
   }
 
+  .container {
+    @apply max-w-[1000px];
+  }
+
   table {
     @apply w-full border-collapse border border-2 border-gray-300;
   }
