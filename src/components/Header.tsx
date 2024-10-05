@@ -52,7 +52,7 @@ const Header: FC = () => {
             )}
             {isAuth ? (
                 <button className="btn btn-red">
-                    <span>Logout</span>
+                    <span>Log out</span>
                     <FaSignOutAlt />
                 </button>
             ) : (
