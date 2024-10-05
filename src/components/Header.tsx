@@ -12,7 +12,14 @@ const Header: FC = () => {
                 <nav>
                     <ul className="flex items-center gap-5 ml-auto mr-10">
                         <li>
-                            <NavLink to={'/'}>Home</NavLink>
+                            <NavLink
+                                to={'/'}
+                                className={({ isActive }) =>
+                                    isActive ? 'text-white' : 'text-white/50'
+                                }
+                            >
+                                Home
+                            </NavLink>
                         </li>
                         <li>
                             <NavLink to={'/transactions'}>Transactions</NavLink>
