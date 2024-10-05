@@ -12,10 +12,13 @@ const Header: FC = () => {
                 <nav>
                     <ul className="flex items-center">
                         <li>
-                            <NavLink to={'/dashboard'}>Dashboard</NavLink>
+                            <NavLink to={'/'}>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to={'/logout'}>Logout</NavLink>
+                            <NavLink to={'/transactions'}>Transactions</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to={'/categories'}>Categories</NavLink>
                         </li>
                     </ul>
                 </nav>
