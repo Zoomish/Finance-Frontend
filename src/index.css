@@ -10,4 +10,8 @@
   td {
     @apply capitalize text-white/70
   }
+
+  thead td {
+    @apply text-white
+  }
 }
