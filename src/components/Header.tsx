@@ -4,7 +4,7 @@ import { FaBtc } from 'react-icons/fa'
 const Header: FC = () => {
     const isAuth = true
     return (
-        <header className="flex items-center justify-between bg-slate-800 px-4 py-2 shadow-sm backdrop-blur-sm">
+        <header className="flex items-center justify-between bg-slate-800 p-4 shadow-sm backdrop-blur-sm">
             <Link to={'/'}>
                 <FaBtc size={20} />
             </Link>
