@@ -10,7 +10,7 @@ const Header: FC = () => {
             </Link>
             {isAuth && (
                 <nav>
-                    <ul className="flex items-center">
+                    <ul className="flex items-center gap-5 ml-auto mr-10">
                         <li>
                             <NavLink to={'/'}>Home</NavLink>
                         </li>
