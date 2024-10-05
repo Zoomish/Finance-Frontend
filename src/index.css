@@ -15,3 +15,18 @@
     @apply text-white
   }
 }
+
+@layer components {
+
+  .btn {
+     @apply flex gap-2 items-center text-sm text-white py-2 px-4 rounded-md;
+  }
+  table {
+    @apply w-full border-collapse border border-2 border-gray-300;
+  }
+
+  th,
+  td {
+    @apply px-4 py-2;
+  }
+}
