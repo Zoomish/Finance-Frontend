@@ -6,4 +6,8 @@
   body {
     @apply text-sm;
   }
+
+  td {
+    @apply capitalize text-white/70
+  }
 }
