@@ -30,3 +30,13 @@
     @apply max-w-[1000px];
   }
 }
+
+@layer utilities {
+  .btn-red {
+    @apply bg-red-500 hover: bg-red-600;
+  }
+
+  .btn-green {
+    @apply bg-green-500 hover: bg-green-600;
+  }
+}
