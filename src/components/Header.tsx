@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { FaBtc } from 'react-icons/fa'
 const Header: FC = () => {
     const isAuth = true
@@ -8,6 +8,16 @@ const Header: FC = () => {
             <Link to={'/'}>
                 <FaBtc size={20} />
             </Link>
+            {isAuth && (
+                <ul className="flex items-center">
+                    <li>
+                        <NavLink to={'/dashboard'}>Dashboard</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={'/logout'}>Logout</NavLink>
+                    </li>
+                </ul>
+            )}
         </header>
     )
 }
