@@ -15,7 +15,9 @@ const Header: FC = () => {
                             <NavLink
                                 to={'/'}
                                 className={({ isActive }) =>
-                                    isActive ? 'text-white p-2' : 'text-white/50 p-2'
+                                    isActive
+                                        ? 'text-white p-2'
+                                        : 'text-white/50 p-2'
                                 }
                             >
                                 Home
@@ -25,7 +27,9 @@ const Header: FC = () => {
                             <NavLink
                                 to={'/transactions'}
                                 className={({ isActive }) =>
-                                    isActive ? 'text-white p-2' : 'text-white/50 p-2'
+                                    isActive
+                                        ? 'text-white p-2'
+                                        : 'text-white/50 p-2'
                                 }
                             >
                                 Transactions
@@ -35,7 +39,9 @@ const Header: FC = () => {
                             <NavLink
                                 to={'/categories'}
                                 className={({ isActive }) =>
-                                    isActive ? 'text-white p-2' : 'text-white/50 p-2'
+                                    isActive
+                                        ? 'text-white p-2'
+                                        : 'text-white/50 p-2'
                                 }
                             >
                                 Categories
@@ -43,6 +49,13 @@ const Header: FC = () => {
                         </li>
                     </ul>
                 </nav>
+            )}
+            {isAuth ? (
+                <button className="text-white p-2">Logout</button>
+            ) : (
+                <Link to={'/login'}>
+                    <button className="text-white p-2">Login</button>
+                </Link>
             )}
         </header>
     )
