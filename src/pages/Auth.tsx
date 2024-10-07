@@ -1,4 +1,5 @@
 import { FC, useState } from 'react'
+import { AuthService } from '../services/auth.service'
 
 const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
@@ -8,6 +9,10 @@ const Auth: FC = () => {
     const regidtrstionHsndler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
             e.preventDefault()
+            const data = await AuthService.registration({
+                email,
+                password,
+            })
         } catch (error) {}
     }
 
