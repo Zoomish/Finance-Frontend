@@ -1,16 +1,58 @@
 import { FC, useState } from 'react'
+import { AuthService } from '../services/auth.service'
+import { toast } from 'react-toastify'
 
 const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+
+    const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+        try {
+            e.preventDefault()
+            const data = await AuthService.registration({
+                email,
+                password,
+            })
+            if (data) {
+                toast.success('Account created successfully')
+                setIsLogin(!isLogin)
+            }
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (err: any) {
+            const error = err.response?.data.message
+            toast.error(error.toString())
+        }
+    }
+
+    const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
+        try {
+            e.preventDefault()
+            const data = await AuthService.login({
+                email,
+                password,
+            })
+            if (data) {
+                toast.success('Account created successfully')
+                setIsLogin(!isLogin)
+            }
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (err: any) {
+            const error = err.response?.data.message
+            toast.error(error.toString())
+        }
+    }
+
     return (
         <div className="mt-40 flex flex-col justify-center items-center bg-slate-900 text-white">
             <h1 className="mb-10 text-center text-xl">
                 {isLogin ? 'Login' : 'Registration'}
             </h1>
 
-            <form className="flex w-1/3 flex-col mx-auto gap-5">
+            <form
+                onSubmit={isLogin ? loginHandler : registrationHandler}
+                className="flex w-1/3 flex-col mx-auto gap-5"
+            >
                 <input
                     type="text"
                     className="input"
