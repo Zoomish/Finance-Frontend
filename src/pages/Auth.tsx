@@ -19,6 +19,7 @@ const Auth: FC = () => {
                 setIsLogin(!isLogin)
             }
         } catch (error) {
+            console.log(error)
             toast.success('Something went wrong')
         }
     }
