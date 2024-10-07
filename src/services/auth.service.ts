@@ -10,7 +10,7 @@ export const AuthService = {
         return data
     },
     async login(userData: IUserData): Promise<IAuthResponse | undefined> {
-        const { data } = await api.post<IAuthResponse>('user', userData)
+        const { data } = await api.post<IAuthResponse>('auth/login', userData)
 
         return data
     },
