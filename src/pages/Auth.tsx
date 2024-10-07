@@ -4,6 +4,13 @@ const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
+
+    const regidtrstionHsndler = async (e: React.FormEvent<HTMLFormElement>) => {
+        try {
+            e.preventDefault()
+        } catch (error) {}
+    }
+
     return (
         <div className="mt-40 flex flex-col justify-center items-center bg-slate-900 text-white">
             <h1 className="mb-10 text-center text-xl">
