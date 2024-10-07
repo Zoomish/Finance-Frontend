@@ -4,12 +4,11 @@ export interface IUserData {
 }
 
 export interface IAuthResponse {
-    token: string
-    email: string
-    password: string
-    createdAt: string
-    updatedAt: string
-    _id?: string
-    __v?: number
-    message: string
+    email: string | undefined
+    password: string | undefined
+    createdAt: string | undefined
+    updatedAt: string | undefined
+    _id?: string | undefined
+    __v?: number | undefined
+    message: string | undefined
 }
