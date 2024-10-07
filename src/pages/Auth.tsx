@@ -1,5 +1,6 @@
 import { FC, useState } from 'react'
 import { AuthService } from '../services/auth.service'
+import { toast } from 'react-toastify'
 
 const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
@@ -13,7 +14,13 @@ const Auth: FC = () => {
                 email,
                 password,
             })
-        } catch (error) {}
+            if (data) {
+                toast.success('Account created successfully')
+                setIsLogin(!isLogin)
+            }
+        } catch (error) {
+            toast.success('Something went wrong')
+        }
     }
 
     return (
