@@ -21,11 +21,17 @@ const Auth: FC = () => {
             </form>
             <div className="flex justify-center mt-5">
                 {isLogin ? (
-                    <button className="text-slate-300 hover:text-white">
+                    <button
+                        onClick={() => setIsLogin(!isLogin)}
+                        className="text-slate-300 hover:text-white"
+                    >
                         You don't have an account?
                     </button>
                 ) : (
-                    <button className="text-slate-300 hover:text-white">
+                    <button
+                        onClick={() => setIsLogin(!isLogin)}
+                        className="text-slate-300 hover:text-white"
+                    >
                         You already have an account?
                     </button>
                 )}
