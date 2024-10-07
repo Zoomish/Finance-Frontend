@@ -7,7 +7,7 @@ const Auth: FC = () => {
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
 
-    const regidtrstionHsndler = async (e: React.FormEvent<HTMLFormElement>) => {
+    const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
             e.preventDefault()
             const data = await AuthService.registration({
