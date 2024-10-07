@@ -25,7 +25,9 @@ const Auth: FC = () => {
                         You don't have an account?
                     </button>
                 ) : (
-                    <button></button>
+                    <button className="text-slate-300 hover:text-white">
+                        You already have an account?
+                    </button>
                 )}
             </div>
         </div>
