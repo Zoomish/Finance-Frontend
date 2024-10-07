@@ -9,11 +9,12 @@ const Auth: FC = () => {
             </h1>
 
             <form className="flex w-1/3 flex-col mx-auto gap-5">
+                <input type="text" className="input" placeholder="Email" />
                 <input
-                    type="text"
+                    type="password"
                     className="input"
-                    placeholder="Email"
-                ></input>
+                    placeholder="Password"
+                />
             </form>
         </div>
     )
