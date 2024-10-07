@@ -19,6 +19,15 @@ const Auth: FC = () => {
                     Submit
                 </button>
             </form>
+            <div className="flex justify-center mt-5">
+                {isLogin ? (
+                    <button className="text-slate-300 hover:text-white">
+                        You don't have an account?
+                    </button>
+                ) : (
+                    <button></button>
+                )}
+            </div>
         </div>
     )
 }
