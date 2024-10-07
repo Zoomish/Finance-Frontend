@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaBtc, FaSignOutAlt } from 'react-icons/fa'
 const Header: FC = () => {
-    const isAuth = true
+    const isAuth = false
     return (
         <header className="flex items-center justify-between bg-slate-800 p-4 shadow-sm backdrop-blur-sm">
             <Link to={'/'}>
