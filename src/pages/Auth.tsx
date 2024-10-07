@@ -15,6 +15,9 @@ const Auth: FC = () => {
                     className="input"
                     placeholder="Password"
                 />
+                <button type="submit" className="btn btn-green mx-auto">
+                    Submit
+                </button>
             </form>
         </div>
     )
