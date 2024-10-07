@@ -21,7 +21,7 @@ const Auth: FC = () => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (err: any) {
             const error = err.response?.data.message
-            toast.error(error)
+            toast.error(error.toString())
         }
     }
 
