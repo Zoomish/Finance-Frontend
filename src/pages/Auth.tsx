@@ -18,9 +18,10 @@ const Auth: FC = () => {
                 toast.success('Account created successfully')
                 setIsLogin(!isLogin)
             }
-        } catch (error) {
-            console.log(error)
-            toast.success('Something went wrong')
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (err: any) {
+            const error = err.response?.data.message
+            toast.error(error)
         }
     }
 
