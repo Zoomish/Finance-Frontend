@@ -1,7 +1,7 @@
-import { UserData } from '../types/user'
+import { IUserData } from '../types/user'
 
 export const AuthService = {
-    async registration(userData: UserData) {},
+    async registration(userData: IUserData) {},
     async login() {},
     async getMe() {},
 }
