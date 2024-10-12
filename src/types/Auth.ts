@@ -1,3 +1,5 @@
+import { IUser } from './User'
+
 export interface IUserData {
     email: string
     password: string
