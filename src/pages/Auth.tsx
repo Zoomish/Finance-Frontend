@@ -1,15 +1,17 @@
 import { FC, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import { AuthService } from '../services/auth.service'
 import { setKeyToLocalStorage } from '../helper/localStorage.helper'
 import { useAppDispatch } from '../redux/hooks'
 import { login } from '../redux/user/userSlice'
+import { AuthService } from '../services/auth.service'
 
 const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
 
     const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
@@ -23,6 +25,7 @@ const Auth: FC = () => {
                 dispatch(login(data.user))
                 toast.success('Account created successfully')
                 setIsLogin(!isLogin)
+                navigate('/')
             }
         } catch (err) {
             console.log(err)
@@ -42,6 +45,7 @@ const Auth: FC = () => {
                 dispatch(login(data.user))
                 toast.success('Logged in successfully')
                 setIsLogin(!isLogin)
+                navigate('/')
             }
         } catch (err) {
             console.log(err)
