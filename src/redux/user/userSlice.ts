@@ -11,8 +11,8 @@ const initialState: IUserState = {
     user: {} as IUser,
 }
 
-export const counterSlice = createSlice({
-    name: 'counter',
+export const userSlice = createSlice({
+    name: 'user',
     initialState,
     reducers: {
         setUser: (state, action: PayloadAction<IUser>) => {
@@ -21,8 +21,8 @@ export const counterSlice = createSlice({
     },
 })
 
-export const {} = counterSlice.actions
+export const { setUser } = userSlice.actions
 
-export const selectCount = (state: RootState) => state.counter.value
+export const selectUser = (state: RootState) => state.user.user
 
-export default counterSlice.reducer
+export default userSlice.reducer
