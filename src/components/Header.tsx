@@ -5,6 +5,7 @@ import { removeKeyFromLocalStorage } from '../helper/localStorage.helper'
 import { useAuth } from '../hooks/useAuth'
 import { useAppDispatch } from '../redux/hooks'
 import { logout } from '../redux/user/userSlice'
+import { toast } from 'react-toastify'
 
 const Header: FC = () => {
     const isAuth = useAuth()
@@ -12,6 +13,7 @@ const Header: FC = () => {
     const logoutHandler = () => {
         dispatch(logout())
         removeKeyFromLocalStorage('token')
+        toast.success('You are logged out')
     }
     return (
         <header className="flex items-center justify-between bg-slate-800 p-4 shadow-sm backdrop-blur-sm">
