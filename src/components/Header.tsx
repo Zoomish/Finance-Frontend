@@ -67,15 +67,13 @@ const Header: FC = () => {
                 </nav>
             )}
             {isAuth ? (
-                <button className="btn btn-red">
+                <button className="btn btn-red" onClick={logoutHandler}>
                     <span>Log out</span>
                     <FaSignOutAlt />
                 </button>
             ) : (
                 <Link to={'/login'}>
-                    <button className="text-white p-2" onClick={logoutHandler}>
-                        Login
-                    </button>
+                    <button className="text-white p-2">Login</button>
                 </Link>
             )}
         </header>
