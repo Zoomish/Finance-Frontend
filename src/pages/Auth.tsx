@@ -44,6 +44,7 @@ const Auth: FC = () => {
                 setKeyToLocalStorage('token', data.token)
                 toast.success('Logged in successfully')
                 setIsLogin(!isLogin)
+                dispatch(login(data.user))
                 navigate('/')
             }
         } catch (err) {
