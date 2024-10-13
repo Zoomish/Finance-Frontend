@@ -9,3 +9,7 @@ export interface IAuthResponse {
     token: string
     user: IUser
 }
+
+export interface IToken {
+    token: string
+}

@@ -1,5 +1,5 @@
 import { api } from '../api/axios.api'
-import { IAuthResponse, IUserData } from '../types/Auth'
+import { IAuthResponse, IToken, IUserData } from '../types/Auth'
 
 export const AuthService = {
     async registration(
@@ -9,8 +9,8 @@ export const AuthService = {
 
         return data
     },
-    async login(userData: IUserData): Promise<IAuthResponse | undefined> {
-        const { data } = await api.post<IAuthResponse>('auth/login', userData)
+    async login(userData: IUserData): Promise<IToken | undefined> {
+        const { data } = await api.post<IToken>('auth/login', userData)
 
         return data
     },
