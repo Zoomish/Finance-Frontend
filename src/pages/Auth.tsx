@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 import { toast } from 'react-toastify'
 import { AuthService } from '../services/auth.service'
+import { setKeyToLocalStorage } from '../helper/localStorage.helper'
 
 const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
@@ -15,7 +16,7 @@ const Auth: FC = () => {
                 password,
             })
             if (data) {
-                localStorage.setItem('token', data.token)
+                setKeyToLocalStorage('token', data.token)
                 toast.success('Account created successfully')
                 setIsLogin(!isLogin)
             }
@@ -33,7 +34,7 @@ const Auth: FC = () => {
                 password,
             })
             if (data) {
-                localStorage.setItem('token', data.token)
+                setKeyToLocalStorage('token', data.token)
                 toast.success('Logged in successfully')
                 setIsLogin(!isLogin)
             }

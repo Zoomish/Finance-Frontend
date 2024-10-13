@@ -4,7 +4,7 @@ export function getTokenFromLocalStorage(): string {
 }
 
 export function setKeyToLocalStorage(key: string, token: string): void {
-    localStorage.setItem(key, JSON.stringify(token))
+    localStorage.setItem(key, token)
 }
 
 export function removeKeyFromLocalStorage(key: string): void {
