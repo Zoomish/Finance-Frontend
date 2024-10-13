@@ -4,12 +4,12 @@ import { RootState } from '../store'
 import { IUser } from '../../types/User'
 
 interface UserState {
-    user: IUser
+    user: IUser | null
     isAuth: boolean
 }
 
 const initialState: UserState = {
-    user: {} as IUser,
+    user: null,
     isAuth: false,
 }
 
