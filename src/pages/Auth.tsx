@@ -15,6 +15,7 @@ const Auth: FC = () => {
                 password,
             })
             if (data) {
+                localStorage.setItem('token', data.token)
                 toast.success('Account created successfully')
                 setIsLogin(!isLogin)
             }
@@ -32,7 +33,8 @@ const Auth: FC = () => {
                 password,
             })
             if (data) {
-                toast.success('Account created successfully')
+                localStorage.setItem('token', data.token)
+                toast.success('Logged in successfully')
                 setIsLogin(!isLogin)
             }
         } catch (err) {
