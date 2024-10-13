@@ -14,5 +14,9 @@ export const AuthService = {
 
         return data
     },
-    async getMe() {},
+    async getMe(): Promise<IAuthResponse | undefined> {
+        const { data } = await api.get<IAuthResponse>('auth/profile')
+
+        return data
+    },
 }
