@@ -21,13 +21,10 @@ export const userSlice = createSlice({
             state.user = action.payload
             state.isAuth = true
         },
-        setIsAuth: (state, action: PayloadAction<boolean>) => {
-            state.isAuth = action.payload
-        },
     },
 })
 
-export const { setUser, setIsAuth } = userSlice.actions
+export const { setUser } = userSlice.actions
 
 export const selectUser = (state: RootState) => state.user.user
 
