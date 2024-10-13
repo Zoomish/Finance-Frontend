@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
-import { AuthService } from '../services/auth.service'
 import { toast } from 'react-toastify'
+import { AuthService } from '../services/auth.service'
 
 const Auth: FC = () => {
     const [isLogin, setIsLogin] = useState<boolean>(true)
@@ -20,6 +20,7 @@ const Auth: FC = () => {
             }
         } catch (err) {
             console.log(err)
+            toast.error('Wrong email or password')
         }
     }
 
@@ -34,10 +35,9 @@ const Auth: FC = () => {
                 toast.success('Account created successfully')
                 setIsLogin(!isLogin)
             }
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } catch (err: any) {
-            const error = err.response?.data.message
-            toast.error(error.toString())
+        } catch (err) {
+            console.log(err)
+            toast.error('Wrong email or password')
         }
     }
 
