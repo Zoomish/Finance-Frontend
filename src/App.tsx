@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { RouterProvider } from 'react-router-dom'
 import { getTokenFromLocalStorage } from './helper/localStorage.helper'
 import { useAppDispatch } from './redux/hooks'
@@ -22,6 +23,9 @@ function App() {
             console.log(error)
         }
     }
+    useEffect(() => {
+        checkAuth()
+    }, [])
     return <RouterProvider router={router} />
 }
 
