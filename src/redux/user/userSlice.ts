@@ -17,14 +17,16 @@ export const userSlice = createSlice({
     name: 'user',
     initialState,
     reducers: {
-        setUser: (state, action: PayloadAction<IUser>) => {
-            state.user = action.payload
-            state.isAuth = true
-        },
+      login: (state, action: PayloadAction<IUser>) => {
+        
+      },
+      logout: (state, action: PayloadAction<IUser>) => {
+
+      }
     },
 })
 
-export const { setUser } = userSlice.actions
+export const {  } = userSlice.actions
 
 export const selectUser = (state: RootState) => state.user
 
