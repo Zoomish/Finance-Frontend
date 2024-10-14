@@ -27,7 +27,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({
 
                 <div className="flex items-center gap-2">
                     <button className="btn btn-green" type="submit">
-                        Submit
+                        {type === 'patch' ? 'Update' : 'Create'}
                     </button>
                     <button
                         className="btn btn-red"
