@@ -1,11 +1,11 @@
 import { createBrowserRouter } from 'react-router-dom'
-import Layout from '../pages/Layout'
+import ProtectedRoute from '../components/ProtectedRoute'
+import Auth from '../pages/Auth'
+import Categories from '../pages/Categories'
 import ErrorPage from '../pages/ErrorPage'
 import Home from '../pages/Home'
+import Layout from '../pages/Layout'
 import Transactions from '../pages/Transactions'
-import Categories from '../pages/Categories'
-import Auth from '../pages/Auth'
-import ProtectedRoute from '../components/ProtectedRoute'
 
 export const router = createBrowserRouter([
     {
