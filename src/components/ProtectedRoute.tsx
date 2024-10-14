@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import Locker from '../assets/lock-svgrepo-com.svg'
 import { useAuth } from '../hooks/useAuth'
 
 interface Props {
@@ -15,7 +16,7 @@ const ProtectedRoute: FC<Props> = ({ children }) => {
                 <div className="mt-20 flex flex-col items-center justify-center gap-10">
                     <img
                         className="w-1/3"
-                        src="../assets/lock-svgrepo-com.svg"
+                        src={Locker}
                         alt="You are not logged in"
                     />
                     <h1 className="text-2xl">You are not logged in</h1>
