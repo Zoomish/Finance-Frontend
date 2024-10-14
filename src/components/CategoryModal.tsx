@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 interface ICategoryModalProps {
-    type: 'add' | 'edit'
+    type: 'post' | 'patch'
     id?: number
     setVisibleModal: (visible: boolean) => void
 }
