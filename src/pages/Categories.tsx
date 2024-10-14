@@ -5,7 +5,7 @@ const Categories: FC = () => {
         <div className="mt-10 p-4 rounded-md bg-slate-400">
             <h1>Your category list</h1>
             <div className="flex mt-2 items-center gap-2 flex-wrap">
-                {/* Render list of categories */}
+                <div className="group py-2 px-4 rounded-lg bg-blue-600 flex items-center relative"></div>
             </div>
         </div>
     )
