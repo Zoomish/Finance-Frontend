@@ -13,7 +13,14 @@ const Categories: FC = () => {
                         <button>
                             <AiFillEdit />
                         </button>
-                        <Form className="flex"></Form>
+                        <Form
+                            className="flex"
+                            method="delete"
+                            action="/categories"
+                        >
+                            <input type="hidden" value={'Category ID'} />
+                            <button type="submit">Delete</button>
+                        </Form>
                     </div>
                 </div>
             </div>
