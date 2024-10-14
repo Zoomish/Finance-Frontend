@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { AiFillEdit } from 'react-icons/ai'
+import { AiFillCloseCircle, AiFillEdit } from 'react-icons/ai'
 import { Form } from 'react-router-dom'
 
 const Categories: FC = () => {
@@ -19,7 +19,9 @@ const Categories: FC = () => {
                             action="/categories"
                         >
                             <input type="hidden" value={'Category ID'} />
-                            <button type="submit">Delete</button>
+                            <button type="submit">
+                                <AiFillCloseCircle />
+                            </button>
                         </Form>
                     </div>
                 </div>
