@@ -13,7 +13,10 @@ const ProtectedRoute: FC<Props> = ({ children }) => {
                 children
             ) : (
                 <div className="mt-20 flex flex-col items-center justify-center gap-10">
-                    <img src="" alt="You are not logged in" />
+                    <img
+                        src="../assets/lock-svgrepo-com.svg"
+                        alt="You are not logged in"
+                    />
                     <h1 className="text-2xl">You are not logged in</h1>
                     <button
                         onClick={() => (window.location.href = '/login')}
