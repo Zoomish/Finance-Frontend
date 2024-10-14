@@ -14,7 +14,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({
 }) => {
     return (
         <div className="fixed top-0 right-0 left-0 bottom-0 w-full h-full bg-black/50 flex justify-center items-center">
-            <Form className="">
+            <Form className="grid grid-cols-1 gap-2 w-[300px] p-5 rounded-md bg-slate-900">
                 <label htmlFor="">
                     <small>Label</small>
                     <input type="text" />
