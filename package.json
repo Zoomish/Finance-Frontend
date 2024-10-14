@@ -1,6 +1,7 @@
 {
     "name": "zoomish_finance-frontend",
     "private": true,
+    "description": "This is a frontend for Zoomish Finance",
     "author": {
         "name": "Zoomish",
         "url": "https://github.com/Zoomish"
