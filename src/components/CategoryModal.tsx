@@ -1,6 +1,16 @@
 import { FC } from 'react'
 
-const CategoryModal: FC = ({type, id, setVisibleModal}) => {
+interface CategoryModalProps {
+    type: 'add' | 'edit'
+    id?: number
+    setVisibleModal: (visible: boolean) => void
+}
+
+const CategoryModal: FC<CategoryModalProps> = ({
+    type,
+    id,
+    setVisibleModal,
+}) => {
     return <div></div>
 }
 
