@@ -11,7 +11,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({
     id,
     setVisibleModal,
 }) => {
-    return <div></div>
+    return <div>aF</div>
 }
 
 export default CategoryModal
