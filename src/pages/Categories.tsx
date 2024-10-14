@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { AiFillEdit } from 'react-icons/ai'
+import { Form } from 'react-router-dom'
 
 const Categories: FC = () => {
     return (
@@ -12,6 +13,7 @@ const Categories: FC = () => {
                         <button>
                             <AiFillEdit />
                         </button>
+                        <Form className="flex"></Form>
                     </div>
                 </div>
             </div>
