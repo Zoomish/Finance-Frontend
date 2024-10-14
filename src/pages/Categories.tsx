@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import { AiFillCloseCircle, AiFillEdit } from 'react-icons/ai'
+import { FaPlus } from 'react-icons/fa'
 import { Form } from 'react-router-dom'
 
 const Categories: FC = () => {
@@ -27,7 +28,8 @@ const Categories: FC = () => {
                 </div>
             </div>
             <button className="mt-5 max-w-fit flex items-center gap-2 text-white/50 hover:text-white">
-                Add new category
+                <FaPlus />
+                <span>Add new category</span>
             </button>
         </div>
     )
