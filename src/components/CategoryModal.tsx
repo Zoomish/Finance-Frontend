@@ -17,12 +17,22 @@ const CategoryModal: FC<ICategoryModalProps> = ({
             <Form className="grid grid-cols-1 gap-2 w-[300px] p-5 rounded-md bg-slate-900">
                 <label htmlFor="title">
                     <small>Category Title</small>
-                    <input className='input w-full' type="text" name='title' placeholder='Title...' />
+                    <input
+                        className="input w-full"
+                        type="text"
+                        name="title"
+                        placeholder="Title..."
+                    />
                 </label>
 
                 <div className="flex items-center gap-2">
-                    <button type="submit">Submit</button>
-                    <button onClick={() => setVisibleModal(false)}>
+                    <button className="btn btn-green" type="submit">
+                        Submit
+                    </button>
+                    <button
+                        className="btn btn-red"
+                        onClick={() => setVisibleModal(false)}
+                    >
                         Cancel
                     </button>
                 </div>
