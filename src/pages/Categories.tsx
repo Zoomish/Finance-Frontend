@@ -2,9 +2,8 @@ import { FC } from 'react'
 
 const Categories: FC = () => {
     return (
-        <div>
-            <h1>Categories</h1>
-            {/* Implement login form */}
+        <div className='mt-10 p-4 rounded-md bg-slate-400'>
+            <h1>Your category list</h1>
         </div>
     )
 }
