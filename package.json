@@ -1,7 +1,12 @@
 {
-    "name": "frontend",
+    "name": "zoomish_finance-frontend",
     "private": true,
-    "version": "0.0.0",
+    "description": "This is a frontend for Zoomish Finance",
+    "author": {
+        "name": "Zoomish",
+        "url": "https://github.com/Zoomish"
+    },
+    "version": "0.6.0",
     "type": "module",
     "scripts": {
         "dev": "npx npm-check-updates -u && npm install && vite",
