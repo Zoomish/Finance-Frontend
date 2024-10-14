@@ -34,7 +34,7 @@ const Categories: FC = () => {
                     <span>Add new category</span>
                 </button>
             </div>
-            <CategoryModal type="post" id={0} setVisibleModal={(setVisibleModal)} />
+            <CategoryModal type="post" id={0} setVisibleModal={() => {}} />
         </>
     )
 }
