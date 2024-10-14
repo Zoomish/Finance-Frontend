@@ -16,7 +16,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({
         <div className="fixed top-0 right-0 left-0 bottom-0 w-full h-full bg-black/50 flex justify-center items-center">
             <Form className="grid grid-cols-1 gap-2 w-[300px] p-5 rounded-md bg-slate-900">
                 <label htmlFor="title">
-                    <small>Label</small>
+                    <small>Category Title</small>
                     <input className='input w-full' type="text" name='title' placeholder='Title...' />
                 </label>
 
