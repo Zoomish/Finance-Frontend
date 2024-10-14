@@ -1,12 +1,12 @@
 import { FC } from 'react'
 
-interface CategoryModalProps {
+interface ICategoryModalProps {
     type: 'add' | 'edit'
     id?: number
     setVisibleModal: (visible: boolean) => void
 }
 
-const CategoryModal: FC<CategoryModalProps> = ({
+const CategoryModal: FC<ICategoryModalProps> = ({
     type,
     id,
     setVisibleModal,
