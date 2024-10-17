@@ -33,6 +33,11 @@ export const categoriesAction = async ({ request }: any) => {
     }
 }
 
+export const categoryLoader = async () => {
+    const { data } = await api.get('/category')
+    return data
+}
+
 const Categories: FC = () => {
     const [visibleModal, setVisibleModal] = useState<boolean>(false)
     return (
