@@ -85,6 +85,9 @@ const Categories: FC = () => {
             {visibleModal && (
                 <CategoryModal type="post" setVisibleModal={setVisibleModal} />
             )}
+            {visibleModal && (
+                <CategoryModal type="patch" setVisibleModal={setVisibleModal} />
+            )}
         </>
     )
 }
