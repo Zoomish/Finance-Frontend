@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { AiFillCloseCircle, AiFillEdit } from 'react-icons/ai'
 import { FaPlus } from 'react-icons/fa'
 import { Form } from 'react-router-dom'
@@ -34,6 +34,7 @@ export const categoriesAction = async ({ request }: any) => {
 }
 
 const Categories: FC = () => {
+    const [visibleModal, setVisibleModal] = useState(false)
     return (
         <>
             <div className="mt-10 p-4 rounded-md bg-slate-400">
@@ -63,7 +64,11 @@ const Categories: FC = () => {
                     <span>Add new category</span>
                 </button>
             </div>
-            <CategoryModal type="post" id={0} setVisibleModal={() => {}} />
+            <CategoryModal
+                type="post"
+                id={0}
+                setVisibleModal={setVisibleModal}
+            />
         </>
     )
 }
