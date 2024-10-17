@@ -4,6 +4,16 @@ import { FaPlus } from 'react-icons/fa'
 import { Form } from 'react-router-dom'
 import CategoryModal from '../components/CategoryModal'
 
+export const categoriesAction = async ({ request }) => {
+    switch (request.method) {
+        case value:
+            break
+
+        default:
+            break
+    }
+}
+
 const Categories: FC = () => {
     return (
         <>
