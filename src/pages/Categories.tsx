@@ -40,7 +40,7 @@ export const categoryLoader = async () => {
 
 const Categories: FC = () => {
     const [visibleModal, setVisibleModal] = useState<boolean>(false)
-    const [isEditing, setisEditing] = useState<boolean>(false)
+    const [isEditing, setIsEditing] = useState<boolean>(false)
     const [categoryId, setCategoryId] = useState<number>(0)
     const categories = useLoaderData() as ICategory[]
     return (
@@ -59,7 +59,7 @@ const Categories: FC = () => {
                                     onClick={() => {
                                         setCategoryId(category.id)
                                         setVisibleModal(true)
-                                        setisEditing(true)
+                                        setIsEditing(true)
                                     }}
                                 >
                                     <AiFillEdit />
