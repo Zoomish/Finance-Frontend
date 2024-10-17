@@ -59,6 +59,7 @@ const Categories: FC = () => {
                                     onClick={() => {
                                         setCategoryId(category.id)
                                         setVisibleModal(true)
+                                        setisEditing(true)
                                     }}
                                 >
                                     <AiFillEdit />
@@ -92,7 +93,7 @@ const Categories: FC = () => {
             {visibleModal && (
                 <CategoryModal type="post" setVisibleModal={setVisibleModal} />
             )}
-            {visibleModal && (
+            {visibleModal && isEditing && (
                 <CategoryModal
                     type="patch"
                     id={categoryId}
