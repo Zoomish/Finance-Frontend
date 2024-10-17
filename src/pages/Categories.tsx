@@ -63,7 +63,11 @@ const Categories: FC = () => {
                                     method="delete"
                                     action="/categories"
                                 >
-                                    <input type="hidden" value={category.id} />
+                                    <input
+                                        type="hidden"
+                                        name="id"
+                                        value={category.id}
+                                    />
                                     <button type="submit">
                                         <AiFillCloseCircle />
                                     </button>
