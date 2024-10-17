@@ -28,6 +28,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({
                         name="title"
                         placeholder="Title..."
                     />
+                    <input hidden type="text" name="id" value={id} />
                 </label>
 
                 <div className="flex items-center gap-2">
