@@ -16,6 +16,15 @@ export const categoriesAction = async ({ request }: any) => {
             await api.post('/category', category)
             return null
         }
+        case 'PATCH': {
+            const { id } = request.params
+            const formData = await request.formData()
+            const category = {
+                title: formData.get('title'),
+            }
+            await api.put(`/category/${id}`, category)
+            return null
+        }
         case 'DELETE': {
             const { id } = request.params
             await api.delete(`/category/${id}`)
