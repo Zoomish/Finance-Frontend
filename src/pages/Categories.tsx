@@ -18,11 +18,11 @@ export const categoriesAction = async ({ request }: any) => {
             return null
         }
         case 'PATCH': {
-            const { id } = request.params
             const category = {
                 title: formData.get('title'),
+                id: formData.get('id'),
             }
-            await api.put(`/category/${id}`, category)
+            await api.put(`/category/category/${category.id}`, category)
             return null
         }
         case 'DELETE': {
