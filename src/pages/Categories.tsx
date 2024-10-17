@@ -8,9 +8,9 @@ import { ICategory } from '../types/Category'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const categoriesAction = async ({ request }: any) => {
+    const formData = await request.formData()
     switch (request.method) {
         case 'POST': {
-            const formData = await request.formData()
             const category = {
                 title: formData.get('title'),
             }
@@ -19,7 +19,6 @@ export const categoriesAction = async ({ request }: any) => {
         }
         case 'PATCH': {
             const { id } = request.params
-            const formData = await request.formData()
             const category = {
                 title: formData.get('title'),
             }
@@ -27,7 +26,6 @@ export const categoriesAction = async ({ request }: any) => {
             return null
         }
         case 'DELETE': {
-            const formData = await request.formData()
             const id = formData.get('id')
             await api.delete(`/category/category/${id}`)
             return null
