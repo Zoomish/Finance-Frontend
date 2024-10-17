@@ -12,6 +12,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({ type, setVisibleModal }) => {
             <Form
                 action="/categories"
                 method={type}
+                onSubmit={() => setVisibleModal(false)}
                 className="grid grid-cols-1 gap-2 w-[300px] p-5 rounded-md bg-slate-900"
             >
                 <label htmlFor="title">
