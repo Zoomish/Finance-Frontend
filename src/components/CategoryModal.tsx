@@ -14,7 +14,12 @@ const CategoryModal: FC<ICategoryModalProps> = ({
 }) => {
     return (
         <div className="fixed top-0 right-0 left-0 bottom-0 w-full h-full bg-black/50 flex justify-center items-center">
-            <Form className="grid grid-cols-1 gap-2 w-[300px] p-5 rounded-md bg-slate-900">
+            <Form
+                action="/categories"
+                method={type}
+                onSubmit={() => setVisibleModal(false)}
+                className="grid grid-cols-1 gap-2 w-[300px] p-5 rounded-md bg-slate-900"
+            >
                 <label htmlFor="title">
                     <small>Category Title</small>
                     <input
@@ -23,6 +28,7 @@ const CategoryModal: FC<ICategoryModalProps> = ({
                         name="title"
                         placeholder="Title..."
                     />
+                    <input hidden type="text" name="id" value={id} />
                 </label>
 
                 <div className="flex items-center gap-2">
