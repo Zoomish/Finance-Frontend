@@ -59,7 +59,10 @@ const Categories: FC = () => {
                         </div>
                     </div>
                 </div>
-                <button className="mt-5 max-w-fit flex items-center gap-2 text-white/50 hover:text-white">
+                <button
+                    onClick={() => setVisibleModal(true)}
+                    className="mt-5 max-w-fit flex items-center gap-2 text-white/50 hover:text-white"
+                >
                     <FaPlus />
                     <span>Add new category</span>
                 </button>
