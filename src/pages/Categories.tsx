@@ -13,6 +13,7 @@ export const categoriesAction = async ({ request }) => {
                 title: formData.get('title'),
             }
             await api.post('/category', category)
+            return null
         }
         case 'GET': {
             const categories = await request.json()
