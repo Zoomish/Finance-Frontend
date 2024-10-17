@@ -52,7 +52,7 @@ const Categories: FC = () => {
                             key={category.id}
                             className="group py-2 px-4 rounded-lg bg-blue-600 flex items-center relative gap-2"
                         >
-                            Salary
+                            {category.title}
                             <div className="absolute hidden rounded-lg px-3 left-0 top-0 bottom-0 right-0 bg-black/90 items-center justify-between group-hover:flex">
                                 <button>
                                     <AiFillEdit />
@@ -62,10 +62,7 @@ const Categories: FC = () => {
                                     method="delete"
                                     action="/categories"
                                 >
-                                    <input
-                                        type="hidden"
-                                        value={'Category ID'}
-                                    />
+                                    <input type="hidden" value={category.id} />
                                     <button type="submit">
                                         <AiFillCloseCircle />
                                     </button>
