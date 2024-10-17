@@ -5,7 +5,8 @@ import { Form } from 'react-router-dom'
 import { api } from '../api/axios.api'
 import CategoryModal from '../components/CategoryModal'
 
-export const categoriesAction = async ({ request }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const categoriesAction = async ({ request }: any) => {
     switch (request.method) {
         case 'POST': {
             const formData = await request.formData()
@@ -15,8 +16,10 @@ export const categoriesAction = async ({ request }) => {
             await api.post('/category', category)
             return null
         }
-        case 'GET': {
-            const categories = await request.json()
+        case 'DELETE': {
+            const { id } = request.params
+            await api.delete(`/category/${id}`)
+            return null
         }
     }
 }
