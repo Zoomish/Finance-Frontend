@@ -4,6 +4,7 @@ import { FaPlus } from 'react-icons/fa'
 import { Form, useLoaderData } from 'react-router-dom'
 import { api } from '../api/axios.api'
 import CategoryModal from '../components/CategoryModal'
+import { ICategory } from '../types/Category'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const categoriesAction = async ({ request }: any) => {
@@ -40,7 +41,7 @@ export const categoryLoader = async () => {
 
 const Categories: FC = () => {
     const [visibleModal, setVisibleModal] = useState<boolean>(false)
-    const categories = useLoaderData()
+    const categories = useLoaderData() as ICategory[]
     return (
         <>
             <div className="mt-10 p-4 rounded-md bg-slate-400">
