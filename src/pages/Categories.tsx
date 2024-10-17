@@ -64,11 +64,13 @@ const Categories: FC = () => {
                     <span>Add new category</span>
                 </button>
             </div>
-            <CategoryModal
-                type="post"
-                id={0}
-                setVisibleModal={setVisibleModal}
-            />
+            {visibleModal && (
+                <CategoryModal
+                    type="post"
+                    id={0}
+                    setVisibleModal={setVisibleModal}
+                />
+            )}
         </>
     )
 }
