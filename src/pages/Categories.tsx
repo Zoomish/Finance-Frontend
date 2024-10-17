@@ -1,7 +1,7 @@
 import { FC, useState } from 'react'
 import { AiFillCloseCircle, AiFillEdit } from 'react-icons/ai'
 import { FaPlus } from 'react-icons/fa'
-import { Form } from 'react-router-dom'
+import { Form, useLoaderData } from 'react-router-dom'
 import { api } from '../api/axios.api'
 import CategoryModal from '../components/CategoryModal'
 
@@ -40,6 +40,7 @@ export const categoryLoader = async () => {
 
 const Categories: FC = () => {
     const [visibleModal, setVisibleModal] = useState<boolean>(false)
+    const categories = useLoaderData()
     return (
         <>
             <div className="mt-10 p-4 rounded-md bg-slate-400">
