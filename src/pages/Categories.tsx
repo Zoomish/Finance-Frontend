@@ -6,11 +6,12 @@ import CategoryModal from '../components/CategoryModal'
 
 export const categoriesAction = async ({ request }) => {
     switch (request.method) {
-        case value:
-            break
-
-        default:
-            break
+        case 'POST': {
+            const category = await request.formData()
+        }
+        case 'GET': {
+            const categories = await request.json()
+        }
     }
 }
 
