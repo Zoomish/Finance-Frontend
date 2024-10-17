@@ -34,7 +34,7 @@ export const categoriesAction = async ({ request }: any) => {
 }
 
 const Categories: FC = () => {
-    const [visibleModal, setVisibleModal] = useState(false)
+    const [visibleModal, setVisibleModal] = useState<boolean>(false)
     return (
         <>
             <div className="mt-10 p-4 rounded-md bg-slate-400">
