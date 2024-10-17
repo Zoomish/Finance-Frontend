@@ -2,8 +2,8 @@ import { FC } from 'react'
 import { AiFillCloseCircle, AiFillEdit } from 'react-icons/ai'
 import { FaPlus } from 'react-icons/fa'
 import { Form } from 'react-router-dom'
-import CategoryModal from '../components/CategoryModal'
 import { api } from '../api/axios.api'
+import CategoryModal from '../components/CategoryModal'
 
 export const categoriesAction = async ({ request }) => {
     switch (request.method) {
@@ -12,8 +12,7 @@ export const categoriesAction = async ({ request }) => {
             const category = {
                 title: formData.get('title'),
             }
-            await api.post('/category')
-
+            await api.post('/category', category)
         }
         case 'GET': {
             const categories = await request.json()
