@@ -27,7 +27,8 @@ export const categoriesAction = async ({ request }: any) => {
             return null
         }
         case 'DELETE': {
-            const { id } = request.params
+            const formData = await request.formData()
+            const id = formData.get('id')
             await api.delete(`/category/${id}`)
             return null
         }
