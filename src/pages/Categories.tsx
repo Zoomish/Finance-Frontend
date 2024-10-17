@@ -22,7 +22,7 @@ export const categoriesAction = async ({ request }: any) => {
                 title: formData.get('title'),
                 id: formData.get('id'),
             }
-            await api.put(`/category/category/${category.id}`, category)
+            await api.patch(`/category/category/${category.id}`, category)
             return null
         }
         case 'DELETE': {
